@@ -1,16 +1,16 @@
 # CRUD_operation
 This django based project is focused on create, read, update and delete operation
 
-Home page without logging in
+<p>Home page without logging in</p>
 <img src="CRUD_pic/pic1.PNG" width=50%>
-Registration page
-<img src="CRUD_pic/pic2.PNG" width=50%>
-Login page
+<p>Login page</p>
 <img src="CRUD_pic/pic3.PNG" width=50%>
-Home page with login
+<p>Registration page</p>
+<img src="CRUD_pic/pic2.PNG" width=50%>
+<p>Home page with login</p>
 <img src="CRUD_pic/pic4.PNG" width=50%>
-Update page
+<p>Update page</p>
 <img src="CRUD_pic/pic5.PNG" width=50%>
-Delete page
+<p>Delete page</p>
 <img src="CRUD_pic/pic6.PNG" width=50%>
 
