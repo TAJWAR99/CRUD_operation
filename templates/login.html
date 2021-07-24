@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+  .container-fluid{
+    height:1000px;
+  }
+  a{
+    text-decoration: none;
+  }
+</style>
+<nav class="navbar navbar-dark bg-dark">
+  <div>
+    <a href="{% url 'home' %}"><span style="font-size: large; color:rgb(82, 197, 120); font-weight: bold; ">Home</span></a>
+  </div>
+  <div>
+    <span style="font-size: large; color:rgb(82, 197, 120); font-weight: bold">CRUD Operation</span>
+  </div>
+</nav>
+<section class="container-fluid" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.jpg');">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+      <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+            <div class="card" style="border-radius: 15px;">
+              <div class="card-body p-5">
+                <h2 class="text-uppercase text-center mb-5">Login to your account</h2>
+  
+                <form action="" method="POST">
+                  {% csrf_token %}
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example1cg" class="form-control form-control-lg" name="username"/>
+                    <label class="form-label" for="form3Example1cg">Enter Username</label>
+                  </div>
+  
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form3Example4cg" class="form-control form-control-lg" name="password"/>
+                    <label class="form-label" for="form3Example4cg">Enter Password</label>
+                  </div>
+  
+                  {% for msg in messages %}
+                  <span style="color: rgb(39, 0, 211);">&#10060; {{msg}}</span>
+                  {% endfor %}
+  
+                  <div class="d-flex justify-content-center">
+                    <input type="submit" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body" value="Login">
+                  </div>
+  
+                  <p class="text-center text-muted mt-5 mb-0">Don't have an account? <a href="{% url 'register' %}" class="fw-bold text-body"><u>Register here</u></a></p>
+  
+                </form>
+  
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}

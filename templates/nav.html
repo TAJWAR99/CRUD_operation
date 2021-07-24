@@ -1,0 +1,22 @@
+{% load static %}
+<nav class="navbar navbar-dark bg-dark">
+    {% if user.is_authenticated %}
+    <span style="font-size: large; color:rgb(82, 197, 120); font-weight: bold">Hey, {{user.username}}!!</span>
+    {% else %}
+    <div>
+      <a href="{% url 'home' %}"><span style="font-size: large; color:rgb(82, 197, 120); font-weight: bold">Home</span></a>
+    </div>
+    {% endif %}
+    <div>
+      <span style="font-size: large; color:rgb(82, 197, 120); font-weight: bold">CRUD Operation</span>
+    </div>
+    <div>
+      {% if not user.is_authenticated %}
+      <a href="{% url 'register' %}" class="btn btn-primary btn-info" style="margin-right: 20px;">Register</a>
+      <a href="{% url 'login' %}" class="btn btn-primary btn-info">Login</a>
+      {% else %}
+      <a href="{% url 'register' %}" class="btn btn-primary btn-info" style="margin-right: 20px;">Register</a>
+      <a href="{% url 'logout' %}" class="btn btn-primary btn-info">Logout</a>
+      {% endif %}
+    </div>
+  </nav>
